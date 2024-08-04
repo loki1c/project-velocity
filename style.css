@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+.common_section {
+    text-align: center;
+}
+.title_wrapper {
+    margin-bottom: 60px;
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    
+}
+.cards_wrapper {
+    display:flex ;
+    justify-content: center;
+    gap: 20px;
+
+}
+.container{
+    max-width: 970px; /* +30 */
+    padding: 0 15px; /*  отступ от сонтейрена +30 из-за падингов */
+    margin: 0 auto;
+}
+p{
+    color: #6A859C;
+    line-height: 1.8;
+}
+.hide{
+    display: none !important;
+}
+/*   общие стили   */
+
+
+
+
+.header {
+   padding: 20px 0;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: #FFF ;
+   z-index: 100;
+}
+.header_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 25px;
+    line-height: 1;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #69b9ff;
+}
+.header_nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+.header_nav li + li{
+    margin-left: 40px ;
+}
+.header_nav a {
+    font-size: 16px;
+    transition: color 0.2s;
+}
+.header_nav a:hover{
+    color: #0002f3;
+}
+.header_nav a:active{
+    color: #004887;
+}
+/* -----------------header----------------- */
+
+.Welcome {
+    min-height: 600px;
+    height: 100vh;
+    padding: 195px 0;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    color: #fff;
+    background-size: cover;
+    background-image: url(img/Welcome\ BG.jpg);
+    background-position: center;
+    background-color: #676778;
+}
+
+.welcom_heading {
+    font-size: 59px;
+    line-height: 1;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.welocme_link {
+    padding: 107px 0px;
+}
+.welocme_link > * + *{
+    margin-left: 20px;
+}
+.link_primary {
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 11px 30px;
+    background-color: #69B9FF;
+    display: inline-block;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.link_primary:hover{
+    background-color: #8AC9FF;
+}
+.link_primary:active{
+    background-color:  #004078;
+}
+.link {
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 1px solid #ffffff;
+    padding: 10px 31px;
+    transition: background-color 0.2s;
+}
+.link:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+.link:active{
+    border-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+/* ------------- Welcome -------------*/
+.common_section .container {
+    padding: 80px 0px;
+
+}
+.title_wrapper .title{
+    padding: 17px 0;
+    color: #676770;
+
+}
+
+.subtitle {
+    font-size: 13px;
+    line-height: 1.2;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #8E8E9C;
+
+}
+.about img{
+    width: 94px;
+    height: 94px;
+    object-fit: contain;
+}
+.about h4{
+    padding: 14px 0;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    color: #676770;
+}
+.about p{
+    font-size: 14px;
+    line-height: 25px;
+    color: #6A859C;
+}
+.about .cards{
+    padding: 41px 16px 23px;
+    border: 1px solid rgba(103, 103, 112, 0.2);
+    border-radius: 4px;
+}
+/* ------------- about -------------*/
+.services {
+    background-color: #192024;
+    
+}
+.services img{
+    padding: 15px 15px 20px;
+}
+.services h4{
+    padding: 22px 0;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+}
+.services p{
+    color: #fff;
+    font-size: 14px;
+    line-height: 25px;
+    padding: 0px 30px;
+}
+.services .title {
+    color: #FFF;
+
+}
+.services .subtitle {
+    color: #FFF;
+
+}
+.services .cards {
+    width: 460px;
+    height: 550px;
+    color: #FFF;
+
+}
+.services .cards + .cards{
+    margin-left: 20px;
+}
+.services .welocme_link{
+    padding: 16px 0px;
+}
+/* ------------- services -------------*/
+
+.tabs_nav button{
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #92A0AD;
+    border-radius: 4px;
+    padding: 0 30px;
+}
+.tabs_nav button.active{
+    background-color: #2E80B6;
+}
+.tabs_nav button + button{
+    margin-left: 14px;
+}
+.tabs_nav {
+    margin-bottom: 40px;
+}
+.tabs_item h4{
+    padding: 15px 0;
+    font-size: 31px;
+    line-height: 1.2;
+    color: rgba(103, 103, 112, 0.9);
+}
+.tabs_item{
+    animation: fade 1s;
+}
+@keyframes fade {
+    from{
+        opacity: 0.3;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.tabs_desc {
+    max-width: 690px;
+    margin: 0 auto;
+    font-size: 13px;
+    line-height: 25px;
+    color: #6A859C;
+}
+
+/* ------------- tabs -------------*/
+.footer_desc{
+    padding: 35px 0;
+}
+.footer_desc h4{
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #676770;
+    margin-bottom: 25px;
+}
+.footer_desc a{
+    font-size: 13px;
+    color: #668CAD;
+
+}
+.footer_desc li{
+    height: 30px;
+    position: relative;
+}
+.footer_desc li + li{
+    margin-top: 6px;
+}
+.footer_desc li::before{
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 1px;
+    right: 0;
+    bottom: 0;
+    background-color: #D5D5E0;
+
+}
+
+.footer_about {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer_about > *{
+    width: 30%;
+}
+.footer_social li::before{
+    width: calc(100% - 34px);
+}
+.footer_social img{ 
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+.footer_velocity p{
+    font-size: 14px;
+    line-height: 25px;
+    color: #6A859C;
+}
+.footer_copy{
+    height: 101px;
+    background-color: #383838;
+    text-align: center;
+    padding: 40px 0;
+}
+.footer_copy p{
+    color: #9E9E9E;
+}
+/* ------------- footer -------------*/
+
+@media (max-width:400px){
+    .header_nav li + li{
+        margin-left: 20px ;
+    }
+}
+/* ------------- REGISTER -------------*/
+.form{
+    width: 500px;
+    height: 500px;
+    background-color: #192024;
+}

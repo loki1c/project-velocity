@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header_container">
+            <h1 class="logo">Velocity</h1>
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="#main">Home</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                    <li><a href="login.html">login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container login_container">
+            <form id="loginForm">
+                <label for="iin">IIN:</label>
+                <input type="text" id="iin" name="iin" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div id="result"></div>
+        </div>
+    </main>
+    
+    
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const iin = document.getElementById('iin').value;
+            const password = document.getElementById('password').value;
+
+            const url = 'https://business.incredit.kz/api/client-login';
+            const body = {
+                iin: iin,
+                password: password
+            };
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(body)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                // Сохранение токена в localStorage с префиксом "Bearer"
+                if (data.token) {
+                    localStorage.setItem('authToken', `Bearer ${data.token}`);
+                }
+
+                document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById('result').textContent = 'Ошибка: ' + error.message;
+            }
+        });
+    </script>
+</body>
+</html>
